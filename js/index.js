@@ -62,3 +62,8 @@ tripButton.forEach(makeGreen => {
         makeGreen.style.backgroundColor = 'green';
     })
 });
+
+const elastiLogo = document.querySelector('.logo-heading');
+elastiLogo.addEventListener('mouseenter', (e) => {
+    TweenMax.to(".logo-heading", 1, {x:300, ease:Bounce.easeOut});
+})
