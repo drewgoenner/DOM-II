@@ -13,9 +13,9 @@ function moveRight() {
 }
 blockTouch.forEach(toRight => {
     toRight.addEventListener('mousedown', (e) => {
-        toRight.timer=setInterval(moveRight, 100)
-    }, false)
+        TweenMax.to(toRight, 1, {xPercent:100});
+    })
     toRight.addEventListener('mouseup', (e) => {
-        clearInterval(toRight.timer)
-    }, false)
+        TweenMax.to(toRight, 1, {xPercent:0});
+    })
 })
